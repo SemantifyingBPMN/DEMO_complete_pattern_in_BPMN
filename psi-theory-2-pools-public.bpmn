@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1ld9iue" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
+  <bpmn:collaboration id="Collaboration_1lh865e">
+    <bpmn:participant id="Participant_13a3v16" name="Transaction Initiator" processRef="Process_0i35tka" />
+    <bpmn:participant id="Participant_0fht65d" name="Transaction Executor" processRef="Process_11he7cx" />
+    <bpmn:messageFlow id="MessageFlow_1gujgb9" name="request" sourceRef="Participant_13a3v16" targetRef="Participant_0fht65d" />
+    <bpmn:messageFlow id="MessageFlow_0yx6exl" name="accept" sourceRef="Participant_13a3v16" targetRef="Participant_0fht65d" />
+    <bpmn:messageFlow id="MessageFlow_01eldvd" name="declare" sourceRef="Participant_0fht65d" targetRef="Participant_13a3v16" />
+    <bpmn:messageFlow id="MessageFlow_0yc3no3" name="promise" sourceRef="Participant_0fht65d" targetRef="Participant_13a3v16" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0i35tka" isExecutable="true" />
+  <bpmn:process id="Process_11he7cx" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1lh865e">
+      <bpmndi:BPMNShape id="Participant_13a3v16_di" bpmnElement="Participant_13a3v16" isHorizontal="true">
+        <dc:Bounds x="140" y="80" width="410" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0fht65d_di" bpmnElement="Participant_0fht65d" isHorizontal="true">
+        <dc:Bounds x="140" y="210" width="410" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_1gujgb9_di" bpmnElement="MessageFlow_1gujgb9">
+        <di:waypoint x="210" y="160" />
+        <di:waypoint x="210" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="221" y="173" width="37" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_0yx6exl_di" bpmnElement="MessageFlow_0yx6exl">
+        <di:waypoint x="500" y="160" />
+        <di:waypoint x="500" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="518" y="173" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_01eldvd_di" bpmnElement="MessageFlow_01eldvd">
+        <di:waypoint x="410" y="210" />
+        <di:waypoint x="410" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="415" y="173" width="37" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="MessageFlow_0yc3no3_di" bpmnElement="MessageFlow_0yc3no3">
+        <di:waypoint x="310" y="210" />
+        <di:waypoint x="310" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="317" y="173" width="40" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
